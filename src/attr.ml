@@ -437,6 +437,7 @@ module Type_id = struct
   let (drag : Dom_html.dragEvent Type_equal.Id.t) = create "dragEvent"
   let (pointer : Dom_html.pointerEvent Type_equal.Id.t) = create "pointerEvent"
   let (animation : Dom_html.animationEvent Type_equal.Id.t) = create "animationEvent"
+  let (transition : Dom_html.transitionEvent Type_equal.Id.t) = create "transitionEvent"
 end
 
 let on type_id name (handler : #Dom_html.event Js.t -> unit Ui_effect.t) : t =
@@ -480,6 +481,7 @@ let on_cut = on Type_id.clipboard "cut"
 let on_paste = on Type_id.clipboard "paste"
 let on_reset = on Type_id.event "reset"
 let on_animationend = on Type_id.animation "animationend"
+let on_transitionend = on Type_id.transition "transitionend"
 let const_ignore _ = Effect.Ignore
 
 class type value_element = object
