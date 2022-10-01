@@ -186,6 +186,7 @@ val on_cut : (Dom_html.clipboardEvent Js.t -> unit Effect.t) -> t
 val on_paste : (Dom_html.clipboardEvent Js.t -> unit Effect.t) -> t
 val on_reset : (Dom_html.event Js.t -> unit Effect.t) -> t
 val on_animationend : (Dom_html.animationEvent Js.t -> unit Effect.t) -> t
+val on_transitionend : (Dom_html.transitionEvent Js.t -> unit Effect.t) -> t
 
 (** Sets a css named variable on the element. The "--" prefix is added by this function:
     [css_var ~name:"foo" "red"] is equivalent to the css [--foo: red]. *)
